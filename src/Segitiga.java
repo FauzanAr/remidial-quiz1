@@ -29,17 +29,17 @@ public class Segitiga extends BangunDatar {
         this.jenis = jenis;
     }
     
-    public int getLuasSegitiga(){
-        if (jenis == 1){
-            return (int)0.5*sisi1*sisi2; //sisi3 tidak di ikutkan karena itu hanya untuk sisi miring dari segitiga siku2
-        }else if (jenis == 2){
-            int a_setengah = sisi1/2; //untuk mencari setengah dari alas yang nantinya akan di pitagoraskan untuk mencari sisi tinggi segitiga
-            int t = (int)Math.sqrt((int)Math.pow(sisi2, 2)-(int)Math.pow(a_setengah, 2)); //Untuk mencari sisi tinggi dari segitiga sama kaki
-            return (int)0.5*sisi1*t;
-        }else if (jenis == 3){
-            int a_setengah = sisi1/2; //untuk mencari setengah alas dari segitiga yang nantinya akan digunakan untuk mencari panjang sisi tinggi dari segitiga
-            int t = (int)Math.sqrt((int)Math.pow(sisi1, 2)-(int)Math.pow(a_setengah, 2));// sama seperti code di atasnya
-            return (int) 0.5 * sisi1 * t;
+    public double getLuasSegitiga(){
+        if (jenis == 1){//Segitiga Siku siku
+            return 0.5*sisi1*sisi2; //sisi3 tidak di ikutkan karena itu hanya untuk sisi miring dari segitiga siku2
+        }else if (jenis == 2){//Segitiga Sama Kaki
+            double a_setengah = sisi1/2; //untuk mencari setengah dari alas yang nantinya akan di pitagoraskan untuk mencari sisi tinggi segitiga
+            double t = Math.sqrt(Math.pow(sisi2, 2)-Math.pow(a_setengah, 2)); //Untuk mencari sisi tinggi dari segitiga sama kaki
+            return 0.5*sisi1*t;
+        }else if (jenis == 3){//Segitiga Sama Sisi
+            double a_setengah = sisi1/2; //untuk mencari setengah alas dari segitiga yang nantinya akan digunakan untuk mencari panjang sisi tinggi dari segitiga
+            double t = Math.sqrt(Math.pow(sisi1, 2)-Math.pow(a_setengah, 2));// sama seperti code di atasnya
+            return 0.5 * sisi1 * t;
         }else
             return 0;
     }

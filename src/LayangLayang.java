@@ -15,10 +15,10 @@ public class LayangLayang extends BangunDatar {
         super(sisi1, sisi2);
     }
     
-    public int getLuasLayang(){
+    public double getLuasLayang(){
         diagonal1 = sisi1;
         diagonal2 = sisi2;
-        return (int)0.5*diagonal1*diagonal2;
+        return 0.5*diagonal1*diagonal2;
     }
     
     public int getKelilingLayang(){
