@@ -11,10 +11,6 @@
 public class BangunDatar {
     protected int sisi1,sisi2;
     
-    public BangunDatar(){
-        
-    }
-    
     public BangunDatar(int sisi1){
         this.sisi1 = sisi1;
     }
